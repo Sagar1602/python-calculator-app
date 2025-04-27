@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get clean
 
 WORKDIR /app
-COPY calculator_ui.py .
+COPY app.py .
 
 # Run the calculator UI
-CMD ["python", "calculator_ui.py"]
+CMD ["python", "app.py"]
