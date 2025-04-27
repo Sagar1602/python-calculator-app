@@ -12,14 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Python and dependencies
+      - name: Install Python, pip, and tkinter
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-tk
+          sudo apt-get install -y python3 python3-pip python3-tk
 
-      - name: Lint code
+      - name: Lint code with flake8
         run: |
-          pip install flake8
+          pip3 install flake8
           flake8 calculator_ui.py
 
       - name: Build Docker Image
