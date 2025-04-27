@@ -22,7 +22,7 @@ jobs:
           python3 -m venv venv
           source venv/bin/activate
           pip install flake8
-          venv/bin/flake8 calculator_ui.py
+          venv/bin/flake8 app.py
 
       - name: Build Docker Image
         run: |
