@@ -26,9 +26,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t python-calculator-ui .
-          
-
+         sudo docker build -t python-calculator-ui .
       - name: (Optional) Run GUI app inside Docker
         run: |
           echo "Skipping GUI test in CI — requires display server"
