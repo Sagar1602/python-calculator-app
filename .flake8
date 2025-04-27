@@ -1,0 +1,9 @@
+[flake8]
+# Ignore certain rules
+ignore = E501, E302, E305
+
+# Max line length (for E501) — default is 79
+max-line-length = 120
+
+# Additional configurations (optional)
+select = B,C,E,F,W
