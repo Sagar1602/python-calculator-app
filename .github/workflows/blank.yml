@@ -24,9 +24,10 @@ jobs:
           pip install flake8
           venv/bin/flake8 app.py
 
-      - name: Build Docker Image
+      - name: Build Docker Image & docker run
         run: |
          sudo docker build -t python-calculator-ui .
+         sudo docker run -d python-calculator-ui
       - name: (Optional) Run GUI app inside Docker
         run: |
           echo "Skipping GUI test in CI — requires display server"
